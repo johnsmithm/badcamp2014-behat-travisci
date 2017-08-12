@@ -16,9 +16,9 @@ composer create-project drupal-composer/drupal-project:7.x-dev html --stability 
 cd html
 composer require drupal/devel:~1.0
 ls
-#drush composer-generate @site
-#composer install
-#cd web
+drush composer-generate @site
+composer install
+cd web
 #drush -y core-quick-drupal
 #cd ..
 #$BASEDIR/vendor/bin/drush si -y standard --db-url=mysql://root@localhost/drupal --account-name=admin --account-pass=admin
