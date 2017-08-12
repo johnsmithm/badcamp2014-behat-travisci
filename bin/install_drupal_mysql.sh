@@ -16,12 +16,13 @@ composer create-project drupal-composer/drupal-project:7.x-dev html --stability 
 cd html
 composer require drupal/devel:~1.0
 ls
-drush composer-generate @site
-composer install
-cd web
-drush -y core-quick-drupal
-cd ..
-$BASEDIR/vendor/bin/drush si -y standard --db-url=mysql://root@localhost/drupal --account-name=admin --account-pass=admin
+#drush composer-generate @site
+#composer install
+#cd web
+#drush -y core-quick-drupal
+#cd ..
+#$BASEDIR/vendor/bin/drush si -y standard --db-url=mysql://root@localhost/drupal --account-name=admin --account-pass=admin
 
 # We might do the same thing with drush quick-drupal
-# drush -y core-quick-drupal --profile=standard --makefile=drupal.make --db-url=mysql://root@localhost/drupal --core=drupal-7.x behat_demo devel --browser=0 --no-server --root=html --account-name=admin --account-pass=admin
+drush -y core-quick-drupal --profile=standard --makefile=drupal.make --db-url=mysql://root@localhost/drupal --core=drupal-7.x behat_demo devel --browser=0 --no-server --root=html --account-name=admin --account-pass=admin
+echo "done"
