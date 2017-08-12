@@ -16,6 +16,7 @@ install:
   - composer install
 
 before_script:
+  - echo ${p}
   - echo "sendmail_path='true'" >> `php --ini | grep "Loaded Configuration" | awk '{print $4}'`
   - ./bin/install_drupal_mysql.sh
   - cd html
