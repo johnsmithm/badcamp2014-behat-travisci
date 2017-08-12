@@ -14,6 +14,7 @@ $BASEDIR/vendor/bin/drush -v
 #$BASEDIR/vendor/bin/drush dl drupal-7.x
 composer create-project drupal-composer/drupal-project:7.x-dev html --stability dev --no-interaction
 cd html
+composer require drupal/devel:~1.0
 ls
 drush composer-generate @site
 composer install
