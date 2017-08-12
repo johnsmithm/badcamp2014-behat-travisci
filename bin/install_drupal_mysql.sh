@@ -9,8 +9,11 @@
 rm -rf html
 $BASEDIR/vendor/bin/drush help make
 $BASEDIR/vendor/bin/drush -v
-$BASEDIR/vendor/bin/drush make -y  drupal.make html
+#$BASEDIR/vendor/bin/drush make -y  drupal.make html
+mkdir html
 cd html
+$BASEDIR/vendor/bin/drush dl drupal-7.x
+ls
 $BASEDIR/vendor/bin/drush si -y standard --db-url=mysql://root@localhost/drupal --account-name=admin --account-pass=admin
 
 # We might do the same thing with drush quick-drupal
