@@ -7,7 +7,9 @@
 # up one of these for you by default.
 #
 rm -rf html
-$BASEDIR/vendor/bin/drush make -y --force-complete drupal.make html
+$BASEDIR/vendor/bin/drush help make
+$BASEDIR/vendor/bin/drush -v
+$BASEDIR/vendor/bin/drush make -y  drupal.make html
 cd html
 $BASEDIR/vendor/bin/drush si -y standard --db-url=mysql://root@localhost/drupal --account-name=admin --account-pass=admin
 
